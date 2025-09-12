@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="l1style.css">
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-color: lavender;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 40px;
+        }
+        .card{
+            border-radius: 8px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            height: 550px;
+        }
+        .icons{
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            margin-left: 80px;
+        }
+        .icons img{
+            width: 50px;
+            height: 50px;
+            background: none;
+        }
+        .payment-method{
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        .method{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            font-weight: 600;
+        }
+        .method img{width: 35px;}
+        .cash{
+            color: white;
+            font-weight: bold;
+            background-color: gray;
+            padding: 10px;
+        }
+        .cash::after{
+            content:"⌄" ;
+            margin-left: 250px;
+        }
+        .info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        h3{
+            text-decoration: underline;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .summary{
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 500;
+            border-bottom: 2px solid #ddd;
+        }
+        .summary-row{
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+        }
+        h4{
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        .products{
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 500;
+            border-bottom: 2px solid #ddd;
+        }
+        .product-row{
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        .coupon{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0px;
+            background-color: lightgrey;
+            border-radius: 8px;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .green{
+            color: limegreen;
+            margin-left: 90px;
+        }
+        .paragraph{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+        .price-row{
+            color: peru;
+        }
+        .right1{
+            margin-left: 100px;
+        }
+        .right2{
+            margin-left:220px;
+            font-weight: 500;
+        }
+        .paragraph img{
+            width: 30px;
+            height: 15px;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .btn{
+            border: none;
+            border-radius: 8px;
+            background-color: orange;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+        .btn:hover{
+            background-color: burlywood;
+        }
+        @media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+  .card {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  .icons {
+    margin-left: 0;
+    justify-content: center;
+  }
+  .summary, .products {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    gap: 20px;
+    padding: 10px;
+  }
+  .card {
+    height: auto;
+    padding: 15px;
+  }
+  .icons img {
+    width: 40px;
+    height: 40px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .summary, .products {
+    font-size: 16px;
+  }
+  .product-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .right1, .right2 {
+    margin-left: 0;
+  }
+  .coupon {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  .paragraph {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .icons img {
+    width: 35px;
+    height: 35px;
+  }
+  .method {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .method img {
+    width: 28px;
+  }
+  .cash::after {
+    margin-left: 0;
+  }
+  .info {
+    font-size: 12px;
+    text-align: center;
+    flex-direction: column;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .summary-row {
+    font-size: 14px;
+  }
+  .products {
+    font-size: 14px;
+  }
+  .price-row {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="icons">
+            <img src="mastercard.png" alt="icon1" class="icon">
+            <img src="visa.png" alt="icon2" class="icon">
+            <img src="paypal.png" alt="icon3" class="icon">
+            <img src="upi.png" alt="icon4" class="icon">
+            </div>
+            <div class="payment-methods">
+                <div class="method">
+                    <label><input type="radio" name="upi">Paytm</label>
+                    <img src="paytm.png" alt="icon3" class="icon">
+                </div>
+                <div class="method">
+                    <label><input type="radio" name="upi">Gpay</label>
+                    <img src="gpay.png" alt="icon4" class="icon">
+                </div>
+                <div class="method">
+                    <label><input type="radio" name="upi">Phonepe</label>
+                    <img src="phonepe.png" alt="icon5" class="icon">
+                </div>
+                <div class="method">
+                    <label><input type="radio" name="upi">Cred</label>
+                    <img src="cred.png" alt="icon5" class="icon">
+                </div>
+                <div class="cash">💳 Cash on Delivery</div>
+                <div class="info">
+                    <img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22blue%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20stroke%3D%22blue%22%20stroke-width%3D%222%22%20fill%3D%22none%22%3E%3C%2Fcircle%3E%0A%20%20%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-size%3D%2214%22%20font-family%3D%22Arial%22%20fill%3D%22blue%22%3Ei%3C%2Ftext%3E%0A%3C%2Fsvg%3E%0A" alt="Icon1"><p>Credit card payments may take up to 24 hours to be processed!</p>
+                </div>
+                <div class="info">
+                    <p>ℹ️ Save my payments details for future purchase</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Order Summary</h3>
+        <div class="summary">
+            <div class="summary-row"><span>Date:</span><span>16th Apr</span></div>
+            <div class="summary-row"><span>Time:</span><span>5.35pm</span></div>
+        </div>
+        <h4>Products</h4>
+        <div class="products">
+            <div class="product-row"><span>The Blue Wedding Card</span><span class="right1">2</span></div>
+            <div class="product-row"><span>Added Complement</span><span class="right1">Hold Bag</span></div>
+        </div>
+        <div class="coupon">
+            <span class="text">MAR0057</span><span class="green">Coupon Applied</span>
+        </div>
+        <div class="paragraph">
+            <p class="price-row"><span>Subtotal</span><span class="right2">Rs.153.40</span></p>
+            <p class="price-row"><span>Shipping</span><span class="right2">0.00 <img src="free.jpeg" alt="Free"></span></p>
+        </div>
+        <div class="button">
+            <a href="orderconfirmed.html"><button class="btn">Pay Rs.153.40</button></a>
+        </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="l1style.css">
+    <style>
+        body{
+            background-color: lavender;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .logo img{
+            width: 300px;
+        }
+        .container{
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            align-items: flex-start;
+        }
+        main{
+            flex: 2;
+        }
+        aside{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .card{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            width: 600px;
+            border: 2px solid white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }  
+        .card img{
+            width: 130px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        .card p{
+            margin: 0;
+            margin-left: auto;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .sku{
+            padding:8px 16px;
+            border-radius: 8px;
+            background-color: orange;
+            font-weight: 600;
+            font-size: 20px;
+            border: none;
+        }
+        .summary{
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .summary-row{
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        .summary h3{
+            margin-bottom: 15px;
+        }
+        .summary .total{
+            margin-top: 10px;
+            border-top: 3px solid #ddd;
+            padding-top: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .cards{
+            border-radius: 8px;
+            border: 2px solid white;
+            padding: 20px;
+        }
+        .cards p{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+            margin: 6px 0; 
+        }  
+        .cards img{
+            width: 30px;
+            height: 30px;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .btn{
+            background-color: orange;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: burlywood;
+        }
+        @media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards {
+    flex: 1;
+    min-width: 280px;
+    margin: 10px;
+  }
+  .card {
+    width: 100%;
+    max-width: 600px;
+  }
+  .summary {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 220px;
+  }
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card img {
+    width: 100px;
+  }
+  .card p {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+  }
+  .sku {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .summary {
+    font-size: 15px;
+  }
+  .summary h3 {
+    text-align: center;
+  }
+  aside {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cards {
+    margin: 10px 0;
+  }
+  .button {
+    margin-top: 20px;
+  }
+  .btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .logo img {
+    width: 180px;
+  }
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .card {
+    padding: 15px;
+  }
+  .card img {
+    width: 80px;
+  }
+  .sku {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .summary-row {
+    font-size: 14px;
+  }
+  .summary .total {
+    font-size: 16px;
+  }
+  .cards p {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+   </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="orderconfirmedlogo.png" alt="Logo">
+        </div>
+    </header>
+    <div class="container">
+        <main>
+        <h2>Your Order</h2>
+        <p>Order ID:356958190</p>
+        <p>Thank You! Your Order has been confirmed.</p>
+        <div class="card">
+            <img src="HWC/hwc1.webp" alt="The Blue Card"> 
+            <button class="sku">SKU:KSN0054<br>SN (SN 54)</button>
+            <p>Rs.153.00</p>
+        </div>
+        <div class="summary">
+            <h3>Order Summary</h3>
+            <div class="summary-row"><span>Subtotal</span><span>Rs.153.40</span></div>
+            <div class="summary-row"><span>Shipping Charge</span><span>Rs.0.00</span></div>
+            <div class="summary-row"><span>Taxes</span><span>18%</span></div>
+            <div class="summary-row"><span>Discount</span><span>Rs.5.00</span></div>
+            <div class="summary-row total"><span>Total</span><span>Rs.148.00</span></div>
+        </div>
+    </main>
+    <aside>
+        <div class="cards">
+            <h3>Customer</h3>
+            <p><img src="orderconfirmedicons/oc1.png" alt="Icon 1">Jhon</p>
+            <p><img src="orderconfirmedicons/oc2.png" alt="Icon 1">1 Order</p>
+        </div>
+        <div class="cards">
+            <h3>Customer Information</h3>
+            <p><img src="orderconfirmedicons/oc3.png" alt="Icon 1">Jhon057@gmail.com</p>
+            <p><img src="orderconfirmedicons/oc4.png" alt="Icon 1">1 Order</p>
+        </div>
+        <div class="cards">
+            <h3>Shipping Address</h3>
+            <p><img src="orderconfirmedicons/oc1.png" alt="Icon 1">Jhon</p>
+            <p>123 Elm street<br>Anytown,ABC 12345<br>Anywhere</p>
+        </div>
+        <div class="cards">
+            <h3>Billing Address</h3>
+            <p>Same as Shipping address</p>
+        </div>
+    </aside>
+    </div>
+     <div class="button">
+        <a href="wedding cards.html"><button class="btn">Continue Shopping</button></a>
+    </div>
+</body>
+</html>
