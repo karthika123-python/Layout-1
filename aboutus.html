@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About US</title>
+    <link rel="stylesheet" href="l1style.css">
+    <style>
+        body{
+            padding: 40px;
+            margin-top: 20px;
+            background-color: lavender;
+            line-height: 1.5;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card{
+            font-size: 20px;
+            margin: 40px 0;
+        }
+        .card-body{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .card-body-reverse{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-direction: row-reverse;
+        }
+        .card-title{
+            margin-bottom: 30px;
+        }
+        .text{
+            flex: 1;
+        }
+        .card-body-img{
+            flex: 1;
+            max-width: 300px;
+        }
+        .heading{
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .paragraph{
+            margin-bottom: 60px;
+            font-size: 20px;
+        }
+        @media (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+  .card-body,
+  .card-body-reverse {
+    gap: 20px;
+  }
+  .card-body-img {
+    max-width: 250px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .paragraph {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-body,
+  .card-body-reverse {
+    flex-direction: column; 
+    text-align: center;
+  }
+  .card-body-reverse {
+    flex-direction: column; 
+  }
+  .text {
+    flex: none;
+  }
+  .card-body img,
+  .card-body-reverse img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  h2.card-title {
+    font-size: 20px;
+  }
+  p, li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .card {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  .card-body img,
+  .card-body-reverse img {
+    max-width: 100%;
+  }
+  .paragraph {
+    font-size: 15px;
+  }
+}
+    </style>
+</head>
+<body>
+    <h1><u>ABOUT US</u></h1>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+            <div class="text">
+                <h2 class="card-title">Celebrating Love, One Invitation at a Time</h2>
+                <p>At Wed Knot Craft, we believe that every love story <br>is unique and deserves to be celebrated in a way <br>that reflects its individuality.</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2jxSTm2pwGc5AxeeP2jEw_ZFEsVX_lrik94w3Qcz_h2O57mu5vCaKbU3ALg82BbyH-r4&usqp=CAU" class="card-img-right" alt="Image 1">
+        </div>
+     </div>
+    <div class="card">
+        <div class="card-body-reverse">
+            <div class="text">
+                <h2 class="card-title">OUR STORY</h2>
+                <p>What started as a passion for design has <br>blossomed into a full-fledged business <br>dedicated to bringing couple's visions to life.<br> Our founder, [Founder's Name], envisioned a <br>platform where couples could find invitations <br>that resonated with their personal style and <br>cultural heritage.</p>
+            </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfmJan7YtmAmLxDreE-y5AoDeV6C78xxxNIx1AKDulJmwdKtGUlJ4dsmBo_9v1dBhph_A&usqp=CAU" class="card-img-right" alt="Image 2">
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="text">
+                <h2 class="card-title">OUR PROMISE</h2>
+            <p>We are commited to providing:</p>
+                <ul>
+                <li>Custom Designs: Tailored invitations that <br>reflect your unique love story.</li>
+                <li>Quality Craftsmanship: Invitations crafted with attention <br>to detail and high-quality materials.</li>
+                <li>Customer Satisfaction: A seamless experience <br>from selection to delivery, ensuring your <br>complete satisfaction.</li>
+               </ul>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEAp0ApFhXHRNWsz4cZ--JGHV6ZMjn7JXnbrXVNvT7M0Ebav8f2vwimdFeWxY0EB8Tieg&usqp=CAU"  class="card-img-right" alt="Image 3">
+            </div>
+        </div>
+    </div>
+    <h2 class="heading">JOIN US in Celebrating Your Special Day</h2>
+    <p class="paragraph">Explore our diverse range of designs and let us help you set the tone for your <br>wedding celebrtion. At [Your Company Name], your love story is our inspiration.</p>
+</body>
+</html>

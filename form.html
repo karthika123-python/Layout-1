@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="l1style.css">
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-color: lavender;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            background-color: white;
+            padding: 30px;
+            width: 900px;
+            border: 1px #ddd;
+            margin: 40px auto;
+        }
+        .navbar{
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: black;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .navbar a:hover{
+            color: lightgrey;
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+            text-decoration-color: black;
+        }
+        .box{
+            display: block;
+        }
+        #login {
+            display: none;
+        }
+        #login:target{
+            display: block;
+        }
+        #signup:target{
+            display: block;
+        }
+        #login:target ~ #signup{
+            display: none;
+        }
+        #signup:target ~  #login{
+            display: block;
+        }
+        h2{
+            font-weight: bold;
+            color: black;
+            font-size: 23px;  
+            margin-bottom: 20px;   
+        }
+        label{
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        input{
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            color: lightgrey;
+            width: 100%;
+            max-width: 250px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .btn{
+            margin-top: 30px;
+            display: block;
+            border-radius: 8px;
+            padding: 10px 25px;
+            text-align: center;
+            background-color:firebrick;
+            width: 100%;
+            max-width: 250px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: #ddd;
+        }
+        .forgot{
+            font-size: 15px;
+            margin-left: 60px;
+        }
+        .forgot a{
+            text-decoration: none;
+            font-size: 18px;
+            color: firebrick;
+            font-weight: 800;
+        }
+        @media (max-width: 1024px) {
+  .container {
+    width: 80%;       
+    padding: 20px;
+  }
+  .navbar {
+    gap: 60px;       
+    font-size: 26px;
+  }
+  input, .btn {
+    max-width: 300px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+  }
+  .navbar {
+    flex-direction: column;   
+    gap: 20px;
+    font-size: 24px;
+  }
+  input, .btn {
+    max-width: 100%;
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .forgot {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  .navbar {
+    font-size: 20px;
+    gap: 15px;
+  }
+  input, .btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  label {
+    font-size: 14px;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <a href="#login">Login</a>
+        <a href="#signup">Sign Up</a>
+    </div>
+        <div id="login" class="box">
+         <h2>Login to my Account</h2>
+        <form>
+            <label>Email</label>
+            <input type="email" placeholder="Enter Email" required>
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" required>
+            <button type="submit" class="btn">Login & Continue</button>
+            <div class="forgot">
+                <a href="#">Forgot Password</a>
+            </div>
+        </form>
+        </div>
+        <div id="signup" class="box">
+        <h2>New User? Sign Up Now</h2>
+        <form>
+            <label>Email</label>
+            <input type="email" placeholder="Enter Email" required>
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" required>
+            <label>Re-Password</label>
+            <input type="password" placeholder="Re-Enter Password" required>
+            <button type="submit" class="btn">Sign up & Continue</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
